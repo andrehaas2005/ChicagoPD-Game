@@ -1,0 +1,9 @@
+{
+  "id": "ferreira",
+  "nome": "Tomás Ferreira",
+  "franquia": "Chicago Fire",
+  "cargo": "Bombeiro",
+  "descricao": "Atendeu o chamado do depósito e fez o primeiro relatório da ocorrência.",
+  "cor": "#8b1e1e",
+  "jogavel": false
+}

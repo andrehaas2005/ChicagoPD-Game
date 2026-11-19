@@ -1,0 +1,10 @@
+# Cache e arquivos gerados pelo Godot
+.godot/
+*.import
+
+# Builds exportados
+export/
+build/
+
+# Sistema
+.DS_Store

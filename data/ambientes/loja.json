@@ -1,0 +1,115 @@
+{
+  "id": "loja",
+  "nome": "Loja de ferragens",
+  "chao": {
+    "largura": 18,
+    "profundidade": 18,
+    "cor": "#7d7a70"
+  },
+  "parede": {
+    "altura": 3.0,
+    "espessura": 0.3,
+    "cor": "#d8d0bc"
+  },
+  "luz": {
+    "cor": "#f2f2f2",
+    "energia": 1.0
+  },
+  "entrada": [
+    0,
+    7
+  ],
+  "moveis": [
+    {
+      "modelo": "res://assets/models/loja_estante.glb",
+      "centro": [
+        -6.5,
+        -8.5
+      ],
+      "tamanho": [
+        1.37,
+        2.4,
+        0.5
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/loja_estante.glb",
+      "centro": [
+        -5.13,
+        -8.5
+      ],
+      "tamanho": [
+        1.37,
+        2.4,
+        0.5
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/loja_estante.glb",
+      "centro": [
+        -3.76,
+        -8.5
+      ],
+      "tamanho": [
+        1.37,
+        2.4,
+        0.5
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/loja_estante.glb",
+      "centro": [
+        -8.5,
+        -2
+      ],
+      "tamanho": [
+        1.37,
+        2.4,
+        0.5
+      ],
+      "rotacao": 90
+    },
+    {
+      "modelo": "res://assets/models/loja_estante.glb",
+      "centro": [
+        -8.5,
+        -0.63
+      ],
+      "tamanho": [
+        1.37,
+        2.4,
+        0.5
+      ],
+      "rotacao": 90
+    },
+    {
+      "modelo": "res://assets/models/loja_caixa.glb",
+      "centro": [
+        6,
+        -8.5
+      ],
+      "tamanho": [
+        1.42,
+        2.35,
+        0.44
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/loja_balcao_caixa.glb",
+      "centro": [
+        5.5,
+        -5.5
+      ],
+      "tamanho": [
+        0.46,
+        0.5,
+        0.44
+      ],
+      "rotacao": 0
+    }
+  ]
+}

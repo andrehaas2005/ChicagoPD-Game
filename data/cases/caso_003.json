@@ -1,0 +1,757 @@
+{
+  "id": "caso_003",
+  "titulo": "Caso 003: Mensagens apagadas em Lakeview",
+  "resumo": "Uma jovem é encontrada inconsciente no apartamento dela em Lakeview. Há sinais de agressão sexual, e o celular sumiu. A psicóloga forense Nina Sokolova, da unidade SVU, confirma que a vítima vinha recebendo ameaças e tinha medo de alguém do prédio. Em 48 horas, a equipe precisa descobrir quem entrou no apartamento, quem sabia da rotina dela e quem apagou o que podia ligá-lo ao crime.",
+  "ordem": 3,
+  "crossover": "Law & Order: SVU",
+  "duracao_horas": 48,
+  "personagens": [
+    "sokolova"
+  ],
+  "locais": [
+    {
+      "id": "delegacia",
+      "nome": "Delegacia do 21º Distrito",
+      "tipo": "delegacia",
+      "ambiente": "delegacia"
+    },
+    {
+      "id": "apartamento",
+      "nome": "Prédio da vítima, em Lakeview",
+      "tipo": "rua",
+      "custo_minutos": 60,
+      "posicao_mapa": [
+        0.35,
+        0.55
+      ],
+      "ambiente": "apartamento"
+    },
+    {
+      "id": "clinica",
+      "nome": "Clínica de atendimento a vítimas",
+      "tipo": "rua",
+      "custo_minutos": 90,
+      "posicao_mapa": [
+        0.7,
+        0.25
+      ],
+      "ambiente": "hospital"
+    },
+    {
+      "id": "bar",
+      "nome": "Bar Halsted",
+      "tipo": "rua",
+      "custo_minutos": 30,
+      "posicao_mapa": [
+        0.55,
+        0.8
+      ],
+      "ambiente": "bar"
+    },
+    {
+      "id": "predio_gerente",
+      "nome": "Apartamento do gerente, no mesmo prédio",
+      "tipo": "rua",
+      "custo_minutos": 30,
+      "posicao_mapa": [
+        0.2,
+        0.72
+      ],
+      "oculto": true,
+      "ambiente": "apartamento"
+    },
+    {
+      "id": "casa_marins",
+      "nome": "Casa de Diego Marins, em Wicker Park",
+      "tipo": "rua",
+      "custo_minutos": 75,
+      "posicao_mapa": [
+        0.88,
+        0.7
+      ],
+      "oculto": true,
+      "ambiente": "apartamento"
+    }
+  ],
+  "pistas": [
+    {
+      "id": "pista_1",
+      "descricao": "Chave reserva da fechadura do apartamento, com arranhões recentes na ponta.",
+      "local": "apartamento",
+      "posicao": [
+        -6,
+        0.15,
+        2
+      ],
+      "laboratorio": {
+        "tempo_horas": 6,
+        "conclusao": "Cópia feita há poucos dias em máquina comum. Os cortes são novos, não de uso prolongado."
+      }
+    },
+    {
+      "id": "pista_2",
+      "descricao": "Mensagens salvas no computador da vítima, com ameaças de alguém do prédio.",
+      "local": "clinica",
+      "posicao": [
+        4,
+        0.15,
+        4
+      ],
+      "laboratorio": {
+        "tempo_horas": 4,
+        "conclusao": "As mensagens foram enviadas pela rede Wi-Fi do prédio entre 01h40 e 02h10 da noite do crime."
+      }
+    },
+    {
+      "id": "pista_3",
+      "descricao": "Celular da vítima escondido dentro de um saco na lixeira do corredor do 4º andar.",
+      "local": "apartamento",
+      "posicao": [
+        2,
+        0.15,
+        -5
+      ]
+    },
+    {
+      "id": "pista_4",
+      "descricao": "Registro do elevador de serviço: cartão de acesso da administração usado no 4º andar às 01h52.",
+      "local": "apartamento",
+      "posicao": [
+        -2,
+        0.15,
+        -3
+      ]
+    },
+    {
+      "id": "pista_5",
+      "descricao": "Imagem da câmera do bar: a vítima sai com um colega às 01h30, e ele não chama táxi.",
+      "local": "bar",
+      "posicao": [
+        5,
+        0.15,
+        -2
+      ]
+    },
+    {
+      "id": "pista_6",
+      "descricao": "Coleta forense do atendimento, com amostra guardada para análise.",
+      "local": "clinica",
+      "posicao": [
+        -4,
+        0.15,
+        -4
+      ],
+      "laboratorio": {
+        "tempo_horas": 8,
+        "conclusao": "Perfil masculino parcial, sem correspondência no banco. Serve de referência se houver amostras autorizadas para comparação."
+      }
+    },
+    {
+      "id": "pista_7",
+      "descricao": "Roupa de cama trocada e lavada, com manchas escuras que ainda não saíram do tecido.",
+      "local": "casa_marins",
+      "posicao": [
+        1,
+        0.15,
+        1
+      ],
+      "oculta": true,
+      "laboratorio": {
+        "tempo_horas": 6,
+        "conclusao": "Vestígios de sangue com perfil compatível com a vítima. A lavagem foi recente, feita na mesma madrugada."
+      }
+    }
+  ],
+  "suspeitos": [
+    {
+      "id": "suspeito_1",
+      "nome": "Diego Marins",
+      "tipo": "suspeito",
+      "personagem_id": null,
+      "motivo": "Colega de trabalho. Saiu da festa da empresa com a vítima.",
+      "posicao": [
+        -6,
+        1,
+        -6
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 19,
+          "ate_hora": 23,
+          "local": "bar"
+        },
+        {
+          "dia": 2,
+          "de_hora": 13,
+          "ate_hora": 16,
+          "local": "bar"
+        }
+      ],
+      "atitude": "arrogante",
+      "limiar_pressao": 2,
+      "alibi": {
+        "texto": "Deixei ela no táxi às duas da manhã e fui para casa.",
+        "falso": true,
+        "exposto_por": [
+          "pista_5"
+        ]
+      },
+      "segredos": [
+        {
+          "id": "segredo_1",
+          "descricao": "Voltou ao apartamento da vítima depois da festa e insistiu em ficar até ela pedir que ele saísse.",
+          "revelado_com_pressao": true,
+          "revelado_por_provas": [
+            "pista_5"
+          ],
+          "revela_pista": null
+        }
+      ],
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Você saiu com ela naquela noite?",
+          "resposta": "Saí, mas deixei ela no táxi às duas da manhã.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Você tem o celular dela?",
+          "resposta": "Não. Por que eu teria?",
+          "pressao": 1,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_3",
+          "pergunta": "Você voltou ao prédio dela naquela noite?",
+          "resposta": "Não. Já falei que fui para casa.",
+          "pressao": 1,
+          "resposta_com_prova": {
+            "pista_5": "Tá, eu voltei. Ela não queria mais companhia e eu não aceitei bem."
+          },
+          "revela_pista": null
+        },
+        {
+          "id": "perg_4",
+          "pergunta": "Como era a relação de vocês no trabalho?",
+          "resposta": "Normal. Ela era boa no que fazia. Sei que vão cair em cima de mim, mas não tenho nada a ver com isso.",
+          "pressao": -1,
+          "revela_pista": null
+        }
+      ]
+    },
+    {
+      "id": "suspeito_2",
+      "nome": "Dennis Harker",
+      "tipo": "suspeito",
+      "personagem_id": null,
+      "motivo": "Gerente do prédio. Tem acesso às chaves reservas de todos os apartamentos.",
+      "posicao": [
+        0,
+        1,
+        6
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 8,
+          "ate_hora": 17,
+          "local": "apartamento"
+        },
+        {
+          "dia": 2,
+          "de_hora": 9,
+          "ate_hora": 12,
+          "local": "clinica"
+        },
+        {
+          "dia": 2,
+          "de_hora": 19,
+          "ate_hora": 23,
+          "local": "bar"
+        }
+      ],
+      "atitude": "calmo",
+      "limiar_pressao": 3,
+      "alibi": {
+        "texto": "Fechei a administração às 23h e fui direto para casa.",
+        "falso": true,
+        "exposto_por": [
+          "pista_4"
+        ]
+      },
+      "segredos": [
+        {
+          "id": "segredo_1",
+          "descricao": "Entrou várias vezes no apartamento da vítima com a chave reserva, sem autorização.",
+          "revelado_com_pressao": true,
+          "revelado_por_provas": [
+            "pista_1",
+            "pista_4"
+          ],
+          "revela_pista": null
+        }
+      ],
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Onde você estava na noite do crime?",
+          "resposta": "Fechei a administração às 23h e fui direto para casa.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Você tem chave reserva dos apartamentos?",
+          "resposta": "Tenho, é padrão. Todo gerente tem.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_3",
+          "pergunta": "Você esteve no 4º andar depois da meia-noite?",
+          "resposta": "Não. Nunca subo depois do expediente.",
+          "pressao": 1,
+          "resposta_com_prova": {
+            "pista_4": "Tá, subi, sim. Ela tinha reclamado da fechadura e eu fui checar. Não devia ter entrado sem avisar."
+          },
+          "revela_pista": null
+        },
+        {
+          "id": "perg_4",
+          "pergunta": "Você sabe por que ela tinha medo de alguém do prédio?",
+          "resposta": "Ela tinha problemas com vizinhos. Não tenho nada a ver com isso.",
+          "pressao": -1,
+          "revela_pista": null
+        }
+      ]
+    },
+    {
+      "id": "suspeito_3",
+      "nome": "Leonard Ayala",
+      "tipo": "suspeito",
+      "personagem_id": null,
+      "motivo": "Ex-namorado da vítima. Mandou mensagens agressivas nas semanas anteriores.",
+      "posicao": [
+        6,
+        1,
+        6
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 18,
+          "ate_hora": 22,
+          "local": "bar"
+        },
+        {
+          "dia": 2,
+          "de_hora": 10,
+          "ate_hora": 14,
+          "local": "apartamento"
+        }
+      ],
+      "atitude": "agressivo",
+      "limiar_pressao": 2,
+      "alibi": {
+        "texto": "Estava com amigos no bar Halsted até as duas da manhã.",
+        "falso": false,
+        "exposto_por": []
+      },
+      "segredos": [],
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Onde você estava naquela noite?",
+          "resposta": "No bar Halsted, com amigos. Saí às duas e fui para casa.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Você mandou mensagens para ela?",
+          "resposta": "Mandei, sim. Ela tinha me bloqueado e eu queria conversar.",
+          "pressao": 1,
+          "revela_pista": "pista_2"
+        },
+        {
+          "id": "perg_3",
+          "pergunta": "Você ameaçou ela?",
+          "resposta": "Não ameacei. Escrevi coisas feias, mas não é a mesma coisa.",
+          "pressao": 1,
+          "resposta_com_prova": {
+            "pista_2": "Mandei aquilo, sim. Mas não fui eu que entrei no apartamento dela."
+          },
+          "revela_pista": null
+        },
+        {
+          "id": "perg_4",
+          "pergunta": "Você sabe quem entrava no apartamento dela?",
+          "resposta": "Não. Ela só dizia que tinha medo do prédio.",
+          "pressao": -1,
+          "revela_pista": null
+        }
+      ]
+    },
+    {
+      "id": "suspeito_4",
+      "nome": "Júlia Mendes",
+      "tipo": "suspeito",
+      "personagem_id": null,
+      "motivo": "Vizinha do 4º andar. Ouviu barulho na madrugada.",
+      "posicao": [
+        -6,
+        1,
+        4
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 8,
+          "ate_hora": 20,
+          "local": "apartamento"
+        },
+        {
+          "dia": 2,
+          "de_hora": 8,
+          "ate_hora": 20,
+          "local": "apartamento"
+        }
+      ],
+      "atitude": "nervoso",
+      "limiar_pressao": 3,
+      "alibi": {
+        "texto": "Estava dormindo no 4º andar.",
+        "falso": false,
+        "exposto_por": []
+      },
+      "segredos": [],
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Onde você estava na madrugada?",
+          "resposta": "Dormindo no 4º andar. Ouvi barulho, mas achei que fosse vizinho.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Você viu alguém subir ou descer a escada?",
+          "resposta": "Não vi nada.",
+          "pressao": 1,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_3",
+          "pergunta": "Tem algo que queira dizer sobre o prédio?",
+          "resposta": "O gerente não é de confiança, mas não vou falar sem ter certeza.",
+          "pressao": -1,
+          "resposta_com_prova": {
+            "pista_4": "Vi o gerente descer pela escada de serviço perto das duas. Eu estava com medo de falar."
+          },
+          "revela_pista": null
+        }
+      ]
+    },
+    {
+      "id": "suspeito_5",
+      "nome": "Caio Ferraz",
+      "tipo": "suspeito",
+      "personagem_id": null,
+      "motivo": "Técnico que fazia manutenção do elevador de serviço naquela semana.",
+      "posicao": [
+        6,
+        1,
+        -4
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 8,
+          "ate_hora": 17,
+          "local": "clinica"
+        },
+        {
+          "dia": 2,
+          "de_hora": 8,
+          "ate_hora": 12,
+          "local": "apartamento"
+        },
+        {
+          "dia": 3,
+          "de_hora": 8,
+          "ate_hora": 12,
+          "local": "bar"
+        }
+      ],
+      "atitude": "calmo",
+      "limiar_pressao": 2,
+      "alibi": {
+        "texto": "Estava consertando o elevador de outro prédio até meia-noite.",
+        "falso": false,
+        "exposto_por": []
+      },
+      "segredos": [],
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Por que você esteve no 4º andar?",
+          "resposta": "Revisão do elevador de serviço, marcada pela administração.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Você tem acesso ao registro do elevador?",
+          "resposta": "Não. Quem vê isso é a administração.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_3",
+          "pergunta": "Você mexeu no painel naquela noite?",
+          "resposta": "Mexi, sim, mas às seis da tarde. Nada a ver com a madrugada.",
+          "pressao": 1,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_4",
+          "pergunta": "Você acha que o gerente sabe de alguma coisa?",
+          "resposta": "Não sei. Ele anda nervoso ultimamente.",
+          "pressao": -1,
+          "revela_pista": null
+        }
+      ]
+    }
+  ],
+  "testemunhas": [
+    {
+      "id": "testemunha_1",
+      "tipo": "testemunha",
+      "nome": "Nina Sokolova",
+      "personagem_id": "sokolova",
+      "motivo": "Psicóloga forense. Atendia a vítima em terapia e conhece a rotina dela.",
+      "posicao": [
+        6,
+        1,
+        -6
+      ],
+      "rotina": [
+        {
+          "dia": 2,
+          "de_hora": 8,
+          "ate_hora": 12,
+          "local": "clinica"
+        },
+        {
+          "dia": 3,
+          "de_hora": 8,
+          "ate_hora": 12,
+          "local": "clinica"
+        }
+      ],
+      "intimavel": true,
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Quando viu a vítima pela última vez?",
+          "resposta": "Na terça, na sessão. Ela parecia assustada.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Ela falou de alguém que a ameaçava?",
+          "resposta": "Não posso quebrar o sigilo por inteiro, mas ela me mostrou mensagens de alguém do prédio.",
+          "pressao": -1,
+          "revela_pista": "pista_2"
+        },
+        {
+          "id": "perg_3",
+          "pergunta": "Ela tinha medo de alguém com acesso ao apartamento?",
+          "resposta": "Ela dizia que sentia alguém entrando na casa. Não sabia quem.",
+          "pressao": 0,
+          "resposta_com_prova": {
+            "pista_1": "Se a chave foi copiada, então ela tinha razão em ter medo. Isso é grave."
+          },
+          "revela_pista": null
+        }
+      ]
+    },
+    {
+      "id": "testemunha_2",
+      "tipo": "testemunha",
+      "nome": "Abel Quintana",
+      "personagem_id": null,
+      "motivo": "Porteiro noturno. Viu movimento no prédio na madrugada.",
+      "posicao": [
+        -4,
+        1,
+        -6
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 22,
+          "ate_hora": 24,
+          "local": "apartamento"
+        },
+        {
+          "dia": 2,
+          "de_hora": 0,
+          "ate_hora": 6,
+          "local": "apartamento"
+        }
+      ],
+      "intimavel": false,
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Viu alguém no prédio na madrugada?",
+          "resposta": "Vi o técnico sair cedo. Depois vi alguém descendo pela escada de serviço, mas não reconheci direito.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "A que horas foi isso?",
+          "resposta": "Perto das duas. Não sei se a pessoa voltou.",
+          "pressao": -1,
+          "revela_pista": null
+        }
+      ]
+    }
+  ],
+  "reviravoltas": [
+    {
+      "hora": 26,
+      "descricao": "Plantão: a administração do prédio entrega o registro do elevador de serviço, enviado com atraso.",
+      "revela_pista": "pista_4"
+    }
+  ],
+  "solucao": {
+    "culpado": "suspeito_2",
+    "pistas_necessarias": [
+      "pista_1",
+      "pista_2",
+      "pista_4"
+    ],
+    "motivo_correto": "Dennis Harker, gerente do prédio, copiou a chave reserva e entrava no apartamento da vítima sem autorização. Quando ela ameaçou denunciá-lo à administração, ele voltou ao prédio de madrugada, cometeu agressão sexual e levou o celular para apagar o que podia ligá-lo ao crime. A cópia recente da chave, o cartão no elevador de serviço e as mensagens enviadas da rede do prédio apontam para ele."
+  },
+  "mandatos": [
+    {
+      "id": "mandato_harker",
+      "tipo": "registros",
+      "alvo": "suspeito_2",
+      "custo_minutos": 60,
+      "justificativa": [
+        "pista_1",
+        "pista_4"
+      ],
+      "pistas_minimas": 1,
+      "motivo_negativa": "O juiz quer um indício ligando o gerente à chave ou ao elevador antes de liberar dados de telefone.",
+      "concedido_texto": "O juiz assina o mandado. Os registros de telefone e a linha de Dennis Harker estão liberados para a sala de dados.",
+      "revela_pistas": []
+    },
+    {
+      "id": "mandato_marins",
+      "tipo": "busca",
+      "alvo": "suspeito_1",
+      "custo_minutos": 90,
+      "justificativa": [
+        "pista_5"
+      ],
+      "pistas_minimas": 1,
+      "motivo_negativa": "O vídeo do bar não basta para entrar na casa de alguém. Falta um indício de que a casa tem relação com o crime.",
+      "concedido_texto": "Mandado de busca e apreensão concedido para a casa de Diego Marins. A equipe pode entrar, mas precisa do endereço.",
+      "revela_pistas": [
+        "pista_7"
+      ],
+      "revela_local": "casa_marins"
+    },
+    {
+      "id": "mandato_ayala",
+      "tipo": "registros",
+      "alvo": "suspeito_3",
+      "custo_minutos": 60,
+      "justificativa": [
+        "pista_2"
+      ],
+      "pistas_minimas": 1,
+      "motivo_negativa": "A pista das mensagens é a única ligação com Ayala, e o juiz acha que não basta para pedir dados do celular.",
+      "concedido_texto": "Mandado concedido. Os registros do celular de Leonard Ayala estão liberados para a sala de dados.",
+      "revela_pistas": []
+    }
+  ],
+  "consultas": [
+    {
+      "id": "consulta_harker_endereco",
+      "tipo": "endereco",
+      "alvo": "suspeito_2",
+      "requer_mandato": "mandato_harker",
+      "custo_minutos": 30,
+      "revela_local": "predio_gerente",
+      "resultado": "Dennis Harker tem apartamento de serviço no próprio prédio da vítima, no 3º andar. A administração usa o endereço como moradia e como local de trabalho."
+    },
+    {
+      "id": "consulta_harker_historico",
+      "tipo": "historico",
+      "alvo": "suspeito_2",
+      "requer_mandato": "mandato_harker",
+      "custo_minutos": 30,
+      "resultado": "Entre 01h30 e 02h20 da noite do crime, o celular de Harker passou pela mesma antena da rua do prédio da vítima. Ele diz que foi para casa às 23h e não saiu mais."
+    },
+    {
+      "id": "consulta_harker_agora",
+      "tipo": "agora",
+      "alvo": "suspeito_2",
+      "requer_mandato": "mandato_harker",
+      "custo_minutos": 30,
+      "revela_local": "predio_gerente",
+      "localizacao": {
+        "local": "predio_gerente",
+        "ate_hora": 26
+      },
+      "resultado": "O celular de Harker está ativo neste momento no próprio prédio, no apartamento de serviço. Ele deve ficar lá até cerca de 10h do dia 2."
+    },
+    {
+      "id": "consulta_marins_endereco",
+      "tipo": "endereco",
+      "alvo": "suspeito_1",
+      "requer_mandato": "mandato_marins",
+      "custo_minutos": 30,
+      "revela_local": "casa_marins",
+      "resultado": "Diego Marins mora em Wicker Park, num sobrado alugado. O endereço está ligado à busca autorizada pelo juiz."
+    },
+    {
+      "id": "consulta_marins_telefone",
+      "tipo": "telefone",
+      "alvo": "suspeito_1",
+      "requer_mandato": "mandato_marins",
+      "custo_minutos": 30,
+      "resultado": "A linha de Marins ficou ativa na Halsted até as 22h da noite do crime. Depois disso, o celular ficou desligado até a manhã seguinte."
+    },
+    {
+      "id": "consulta_ayala_agora",
+      "tipo": "agora",
+      "alvo": "suspeito_3",
+      "requer_mandato": "mandato_ayala",
+      "custo_minutos": 30,
+      "localizacao": {
+        "local": "bar",
+        "ate_hora": 30
+      },
+      "resultado": "O celular de Ayala está ativo neste momento no Bar Halsted. Ele deve ficar por lá até as 14h do dia 2."
+    },
+    {
+      "id": "consulta_ayala_historico",
+      "tipo": "historico",
+      "alvo": "suspeito_3",
+      "requer_mandato": "mandato_ayala",
+      "custo_minutos": 30,
+      "resultado": "Entre 01h40 e 02h10, o celular de Ayala passou pela antena do Lakeview, a poucas quadras do prédio. Ele diz que ficou no bar até as duas. Pode ser só o caminho de volta."
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "id": "galpao",
+  "nome": "Galpão da Halsted",
+  "chao": {
+    "largura": 18,
+    "profundidade": 18,
+    "cor": "#4a4a48"
+  },
+  "parede": {
+    "altura": 3.0,
+    "espessura": 0.3,
+    "cor": "#6b6b66"
+  },
+  "luz": {
+    "cor": "#9fb4cc",
+    "energia": 0.45
+  },
+  "entrada": [
+    0,
+    7
+  ],
+  "moveis": [
+    {
+      "modelo": "res://assets/models/galpao_palete.glb",
+      "centro": [
+        -5,
+        4
+      ],
+      "tamanho": [
+        1.24,
+        0.93,
+        0.8
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/galpao_palete.glb",
+      "centro": [
+        -3.7,
+        4
+      ],
+      "tamanho": [
+        1.24,
+        0.93,
+        0.8
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/galpao_palete.glb",
+      "centro": [
+        -4.3,
+        5.3
+      ],
+      "tamanho": [
+        1.24,
+        0.93,
+        0.8
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/galpao_carrinho.glb",
+      "centro": [
+        4,
+        -3
+      ],
+      "tamanho": [
+        0.95,
+        1.16,
+        0.6
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/galpao_carrinho.glb",
+      "centro": [
+        5.3,
+        -3
+      ],
+      "tamanho": [
+        0.95,
+        1.16,
+        0.6
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/galpao_barris.glb",
+      "centro": [
+        4,
+        4
+      ],
+      "tamanho": [
+        1.5,
+        1.0,
+        1.25
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/galpao_barris.glb",
+      "centro": [
+        5.8,
+        4
+      ],
+      "tamanho": [
+        1.5,
+        1.0,
+        1.25
+      ],
+      "rotacao": 0
+    }
+  ]
+}

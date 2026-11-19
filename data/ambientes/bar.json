@@ -1,0 +1,115 @@
+{
+  "id": "bar",
+  "nome": "Bar Halsted",
+  "chao": {
+    "largura": 18,
+    "profundidade": 18,
+    "cor": "#3d2b22"
+  },
+  "parede": {
+    "altura": 3.0,
+    "espessura": 0.3,
+    "cor": "#2e2420"
+  },
+  "luz": {
+    "cor": "#ff6a4d",
+    "energia": 0.55
+  },
+  "entrada": [
+    0,
+    7
+  ],
+  "moveis": [
+    {
+      "modelo": "res://assets/models/bar_balcao.glb",
+      "centro": [
+        -1.8,
+        -6
+      ],
+      "tamanho": [
+        1.8,
+        1.46,
+        0.82
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/bar_balcao.glb",
+      "centro": [
+        0,
+        -6
+      ],
+      "tamanho": [
+        1.8,
+        1.46,
+        0.82
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/bar_balcao.glb",
+      "centro": [
+        6,
+        -3
+      ],
+      "tamanho": [
+        1.8,
+        1.46,
+        0.82
+      ],
+      "rotacao": 90
+    },
+    {
+      "modelo": "res://assets/models/bar_balcao.glb",
+      "centro": [
+        6,
+        -1.2
+      ],
+      "tamanho": [
+        1.8,
+        1.46,
+        0.82
+      ],
+      "rotacao": 90
+    },
+    {
+      "modelo": "res://assets/models/bar_banqueta.glb",
+      "centro": [
+        -1.8,
+        -4.9
+      ],
+      "tamanho": [
+        0.51,
+        1.02,
+        0.51
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/bar_banqueta.glb",
+      "centro": [
+        0,
+        -4.9
+      ],
+      "tamanho": [
+        0.51,
+        1.02,
+        0.51
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/bar_banqueta.glb",
+      "centro": [
+        4.6,
+        -3
+      ],
+      "tamanho": [
+        0.51,
+        1.02,
+        0.51
+      ],
+      "rotacao": 0
+    }
+  ]
+}

@@ -1,0 +1,690 @@
+{
+  "id": "caso_002",
+  "titulo": "Caso 002: Fumaça no depósito da Halsted",
+  "resumo": "Um incêndio em um depósito da Halsted Street deixa um homem inconsciente, e o laudo dos bombeiros aponta ignição criminosa. A vítima foi levada ao Chicago Med, onde a equipe notou sinais estranhos no paciente. Quem ateou fogo ao galpão, e por quê?",
+  "ordem": 2,
+  "crossover": "Chicago Med",
+  "duracao_horas": 48,
+  "personagens": [
+    "castellano",
+    "ferreira"
+  ],
+  "locais": [
+    {
+      "id": "delegacia",
+      "nome": "Delegacia do 21º Distrito",
+      "tipo": "delegacia",
+      "ambiente": "delegacia"
+    },
+    {
+      "id": "galpao",
+      "nome": "Depósito da Halsted Street",
+      "tipo": "rua",
+      "custo_minutos": 45,
+      "posicao_mapa": [
+        0.25,
+        0.7
+      ],
+      "ambiente": "galpao"
+    },
+    {
+      "id": "hospital",
+      "nome": "Hospital Gaylord",
+      "tipo": "rua",
+      "custo_minutos": 60,
+      "posicao_mapa": [
+        0.7,
+        0.25
+      ],
+      "ambiente": "hospital"
+    },
+    {
+      "id": "residencia",
+      "nome": "Casa da família Vale, em Bridgeport",
+      "tipo": "rua",
+      "custo_minutos": 90,
+      "posicao_mapa": [
+        0.8,
+        0.7
+      ],
+      "ambiente": "apartamento"
+    },
+    {
+      "id": "posto_ashland",
+      "nome": "Posto de gasolina da Ashland Avenue",
+      "tipo": "rua",
+      "custo_minutos": 40,
+      "posicao_mapa": [
+        0.5,
+        0.45
+      ],
+      "oculto": true,
+      "ambiente": "rua"
+    }
+  ],
+  "pistas": [
+    {
+      "id": "pista_1",
+      "descricao": "Galão de querosene vazio atrás das caixas, com marcas de luva de couro na tampa.",
+      "local": "galpao",
+      "posicao": [
+        -5,
+        0.15,
+        -5
+      ],
+      "laboratorio": {
+        "tempo_horas": 6,
+        "conclusao": "Resíduo de querosene de aquecedor industrial. As marcas na tampa são de luva de couro grande."
+      }
+    },
+    {
+      "id": "pista_2",
+      "descricao": "Recibo de compra de três galões de querosene em nome de Ricardo Vale, de três dias antes do incêndio.",
+      "local": "residencia",
+      "posicao": [
+        5,
+        0.15,
+        -2
+      ]
+    },
+    {
+      "id": "pista_3",
+      "descricao": "Prontuário com a anotação de cheiro forte de querosene no paciente.",
+      "local": "hospital",
+      "posicao": [
+        1,
+        0.15,
+        3
+      ]
+    },
+    {
+      "id": "pista_4",
+      "descricao": "Luva de couro grande, guardada na garagem, com manchas escuras nos dedos.",
+      "local": "residencia",
+      "posicao": [
+        -2,
+        0.15,
+        4
+      ],
+      "laboratorio": {
+        "tempo_horas": 5,
+        "conclusao": "Resíduo de querosene idêntico ao do galão. O tamanho da luva é compatível com as marcas da tampa."
+      }
+    },
+    {
+      "id": "pista_5",
+      "descricao": "Registro de ronda do depósito: o último check do zelador foi às 19h30.",
+      "local": "galpao",
+      "posicao": [
+        4,
+        0.15,
+        5
+      ]
+    },
+    {
+      "id": "pista_6",
+      "descricao": "Nota fiscal de um posto da Ashland Avenue, no bolso de um casaco pendurado na garagem: abastecimento às 22h10.",
+      "local": "residencia",
+      "posicao": [
+        0,
+        0.15,
+        -5
+      ]
+    },
+    {
+      "id": "pista_8",
+      "descricao": "Tambor de querosene escondido atrás do carro, com etiqueta do depósito ainda presa na alça.",
+      "local": "residencia",
+      "posicao": [
+        -2,
+        0.15,
+        2
+      ],
+      "oculta": true,
+      "laboratorio": {
+        "tempo_horas": 4,
+        "conclusao": "Resíduo de querosene no tambor. A etiqueta é de um lote comprado pelo depósito três semanas antes do incêndio."
+      }
+    },
+    {
+      "id": "pista_9",
+      "descricao": "Imagem da câmera do posto: homem de boné pagando a gasolina às 22h10, com a mesma jaqueta do casaco da garagem.",
+      "local": "posto_ashland",
+      "posicao": [
+        1,
+        0.15,
+        -1
+      ],
+      "oculta": true
+    }
+  ],
+  "suspeitos": [
+    {
+      "id": "suspeito_1",
+      "nome": "Eugene Sobczak, zelador do depósito",
+      "tipo": "suspeito",
+      "personagem_id": null,
+      "motivo": "Tinha as chaves do galpão, saiu cedo naquela noite e guarda fósforos na sala de caldeira.",
+      "posicao": [
+        6,
+        1,
+        6
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 8,
+          "ate_hora": 16,
+          "local": "galpao"
+        },
+        {
+          "dia": 2,
+          "de_hora": 14,
+          "ate_hora": 18,
+          "local": "galpao"
+        },
+        {
+          "dia": 2,
+          "de_hora": 21,
+          "ate_hora": 24,
+          "local": "hospital"
+        }
+      ],
+      "atitude": "nervoso",
+      "limiar_pressao": 2,
+      "alibi": {
+        "texto": "Fiz a ronda até meia-noite, sozinho no depósito. Ninguém confirma, infelizmente.",
+        "falso": true,
+        "exposto_por": [
+          "pista_5"
+        ]
+      },
+      "segredos": [
+        {
+          "id": "segredo_1",
+          "descricao": "Saiu para beber num bar da Halsted e só voltou depois da meia-noite.",
+          "revelado_com_pressao": true,
+          "revelado_por_provas": [
+            "pista_5"
+          ],
+          "revela_pista": null
+        }
+      ],
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Onde você estava às 22h?",
+          "resposta": "Fazendo ronda no quarteirão. Ninguém confirma, infelizmente.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Quem tinha a chave do galpão?",
+          "resposta": "Só eu e o dono, o Ricardo.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_3",
+          "pergunta": "Seu registro de ronda acaba às 19h30. O que aconteceu depois?",
+          "resposta": "Não sei do que você está falando. Eu fiz a ronda.",
+          "pressao": 1,
+          "resposta_com_prova": {
+            "pista_5": "Tá bom, eu saí. Fui beber e voltei tarde. Não ateei fogo em nada."
+          },
+          "revela_pista": null
+        }
+      ]
+    },
+    {
+      "id": "suspeito_2",
+      "nome": "Dra. Helena Castellano",
+      "tipo": "suspeito",
+      "personagem_id": "castellano",
+      "motivo": "Atendeu a vítima e assinou o primeiro laudo, que atrasou a investigação.",
+      "posicao": [
+        -6,
+        1,
+        6
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 8,
+          "ate_hora": 20,
+          "local": "hospital"
+        },
+        {
+          "dia": 2,
+          "de_hora": 8,
+          "ate_hora": 12,
+          "local": "hospital"
+        }
+      ],
+      "atitude": "arrogante",
+      "limiar_pressao": 3,
+      "alibi": {
+        "texto": "Estava de plantão no Hospital Gaylord a noite toda.",
+        "falso": false,
+        "exposto_por": []
+      },
+      "segredos": [
+        {
+          "id": "segredo_1",
+          "descricao": "É cunhada de Ricardo Vale e atrasou o laudo a pedido dele, para não registrar o cheiro de querosene.",
+          "revelado_com_pressao": true,
+          "revelado_por_provas": [
+            "pista_3",
+            "pista_2"
+          ],
+          "revela_pista": null
+        }
+      ],
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Você atendeu a vítima?",
+          "resposta": "Sim. Ele chegou com queimaduras leves nas mãos e muito confuso.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Notou algo estranho no paciente?",
+          "resposta": "O cheiro de querosene era forte. Anotei no prontuário.",
+          "pressao": 0,
+          "revela_pista": "pista_3"
+        },
+        {
+          "id": "perg_3",
+          "pergunta": "Por que o primeiro laudo saiu sem essa informação?",
+          "resposta": "Pressa. O plantão estava lotado e eu assinei o laudo padrão.",
+          "pressao": -1,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_4",
+          "pergunta": "Você conhece Ricardo Vale?",
+          "resposta": "Conheço de vista. Não tenho nada a ver com ele.",
+          "pressao": 1,
+          "resposta_com_prova": {
+            "pista_2": "Tá... ele é meu cunhado. Pediu que eu não complicasse as coisas. Eu não sabia de querosene."
+          },
+          "revela_pista": null
+        }
+      ]
+    },
+    {
+      "id": "suspeito_3",
+      "nome": "Ricardo Vale, dono do depósito",
+      "tipo": "suspeito",
+      "personagem_id": null,
+      "motivo": "Tinha seguro alto sobre o depósito e dívidas acumuladas.",
+      "posicao": [
+        0,
+        1,
+        -6
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 8,
+          "ate_hora": 12,
+          "local": "residencia"
+        },
+        {
+          "dia": 2,
+          "de_hora": 9,
+          "ate_hora": 13,
+          "local": "galpao"
+        },
+        {
+          "dia": 2,
+          "de_hora": 19,
+          "ate_hora": 23,
+          "local": "residencia"
+        }
+      ],
+      "atitude": "calmo",
+      "limiar_pressao": 3,
+      "alibi": {
+        "texto": "Estava em casa, com a família, a noite toda.",
+        "falso": true,
+        "exposto_por": [
+          "pista_6"
+        ]
+      },
+      "segredos": [
+        {
+          "id": "segredo_1",
+          "descricao": "Mandou incendiar o depósito para receber o seguro de 1,2 milhão, depois que a seguradora avisou que cancelaria a apólice.",
+          "revelado_com_pressao": true,
+          "revelado_por_provas": [
+            "pista_1",
+            "pista_4"
+          ],
+          "revela_pista": null
+        }
+      ],
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Onde estava na noite do incêndio?",
+          "resposta": "Em casa, com a família, o tempo todo.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Comprou querosene recentemente?",
+          "resposta": "Comprei para a máquina do depósito. Não é crime nenhum.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_3",
+          "pergunta": "Você estava em casa às 22h10? Tenho um registro de posto.",
+          "resposta": "Estava. Não saí de casa.",
+          "pressao": 1,
+          "resposta_com_prova": {
+            "pista_6": "Tá bom, passei no posto para encher o tanque. Foi só isso, eu juro."
+          },
+          "revela_pista": null
+        },
+        {
+          "id": "perg_4",
+          "pergunta": "Essas luvas são suas? Estão sujas de querosene.",
+          "resposta": "Não sei como isso foi parar lá. Qualquer um tinha acesso à garagem.",
+          "pressao": 1,
+          "resposta_com_prova": {
+            "pista_4": "Tá... são as minhas luvas. Eu carreguei galões esta semana. Isso não prova nada."
+          },
+          "revela_pista": null
+        }
+      ]
+    },
+    {
+      "id": "suspeito_4",
+      "nome": "Marcus Dell, sócio da seguradora de plantão",
+      "tipo": "suspeito",
+      "personagem_id": null,
+      "motivo": "Foi o agente que vendeu a apólice do depósito e estava com a renovação pendente.",
+      "posicao": [
+        -6,
+        1,
+        -2
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 9,
+          "ate_hora": 17,
+          "local": "delegacia"
+        },
+        {
+          "dia": 2,
+          "de_hora": 10,
+          "ate_hora": 15,
+          "local": "galpao"
+        }
+      ],
+      "atitude": "arrogante",
+      "limiar_pressao": 2,
+      "alibi": {
+        "texto": "Estava num jantar de negócios no centro, até as duas da manhã.",
+        "falso": false,
+        "exposto_por": []
+      },
+      "segredos": [],
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Quando foi a última vez que falou com Ricardo Vale?",
+          "resposta": "Na semana passada, sobre a renovação. Nada fora do normal.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "A apólice ainda estava valendo naquela noite?",
+          "resposta": "Estava, mas a revisão estava na mesa. Isso é confidencial.",
+          "pressao": 1,
+          "revela_pista": null
+        }
+      ]
+    },
+    {
+      "id": "suspeito_5",
+      "nome": "Lucas Brandt, sobrinho que trabalhava no depósito",
+      "tipo": "suspeito",
+      "personagem_id": null,
+      "motivo": "Tinha uma discussão recente com o tio e vinha pegando dinheiro do caixa.",
+      "posicao": [
+        6,
+        1,
+        -1
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 14,
+          "ate_hora": 22,
+          "local": "hospital"
+        },
+        {
+          "dia": 2,
+          "de_hora": 14,
+          "ate_hora": 20,
+          "local": "residencia"
+        }
+      ],
+      "atitude": "nervoso",
+      "limiar_pressao": 2,
+      "alibi": {
+        "texto": "Estava no hospital visitando um amigo, a noite toda.",
+        "falso": false,
+        "exposto_por": []
+      },
+      "segredos": [],
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Você brigou com seu tio recentemente?",
+          "resposta": "Não foi briga. Foi uma discussão sobre dinheiro.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Onde você estava na noite do incêndio?",
+          "resposta": "No hospital, com um amigo. Pode perguntar lá.",
+          "pressao": 0,
+          "revela_pista": null
+        }
+      ]
+    }
+  ],
+  "testemunhas": [
+    {
+      "id": "testemunha_1",
+      "tipo": "testemunha",
+      "nome": "Tomás Ferreira, bombeiro da Firehouse 51",
+      "motivo": "Apagou o fogo e viu a porta dos fundos aberta antes da chegada da equipe.",
+      "posicao": [
+        6,
+        1,
+        -5
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 8,
+          "ate_hora": 16,
+          "local": "hospital"
+        }
+      ],
+      "intimavel": true,
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "O que você viu quando chegou?",
+          "resposta": "A porta dos fundos estava aberta e o galpão já tinha fumaça densa.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Sentiu algum cheiro diferente?",
+          "resposta": "Querosene. Chamei a polícia no mesmo minuto.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_3",
+          "pergunta": "Viu alguém sair do local?",
+          "resposta": "Um carro escuro, sem placa legível, saindo pela Halsted antes do alarme.",
+          "pressao": 0,
+          "revela_pista": null
+        }
+      ]
+    },
+    {
+      "id": "testemunha_2",
+      "tipo": "testemunha",
+      "nome": "Dona Lúcia Harmon, catadora de latas da Halsted",
+      "motivo": "Passava pelo depósito todo fim de tarde e viu quem andava por lá.",
+      "posicao": [
+        -6,
+        1,
+        -4
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 17,
+          "ate_hora": 21,
+          "local": "galpao"
+        }
+      ],
+      "intimavel": false,
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Viu alguém no depósito naquela noite?",
+          "resposta": "Um homem de jaqueta vermelha saiu pela porta dos fundos antes do fogo.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Escutou alguma coisa?",
+          "resposta": "Um barulho de galão batendo no chão, por volta das dez.",
+          "pressao": 0,
+          "revela_pista": null
+        }
+      ]
+    }
+  ],
+  "reviravoltas": [
+    {
+      "hora": 28,
+      "descricao": "Plantão: a conferência do sistema do depósito confirma que o último registro do zelador foi às 19h30.",
+      "revela_pista": "pista_5"
+    },
+    {
+      "hora": 44,
+      "descricao": "Plantão: a seguradora confirma que a apólice de 1,2 milhão estava sob revisão desde a semana anterior.",
+      "revela_pista": null
+    }
+  ],
+  "solucao": {
+    "culpado": "suspeito_3",
+    "pistas_necessarias": [
+      "pista_1",
+      "pista_2",
+      "pista_4",
+      "pista_6"
+    ],
+    "motivo_correto": "Ricardo Vale ateou fogo ao depósito para receber o seguro de 1,2 milhão, depois de a seguradora avisar que cancelaria a apólice. Comprou o querosene dias antes, usou as luvas de couro e saiu com o carro às 22h10, desmentindo o próprio álibi. O zelador e a médica eram peças de confusão: um saiu para beber, a outra atrasou o laudo para proteger o cunhado."
+  },
+  "mandatos": [
+    {
+      "id": "mandato_vale_registros",
+      "tipo": "registros",
+      "alvo": "suspeito_3",
+      "custo_minutos": 60,
+      "justificativa": [
+        "pista_2",
+        "pista_6"
+      ],
+      "pistas_minimas": 1,
+      "motivo_negativa": "O recibo do querosene pode ser de qualquer pessoa da família. O juiz quer mais um indício antes de liberar os dados de Vale.",
+      "concedido_texto": "Juiz concede os registros do celular de Ricardo Vale.",
+      "revela_pistas": []
+    },
+    {
+      "id": "mandato_vale_busca",
+      "tipo": "busca",
+      "alvo": "suspeito_3",
+      "custo_minutos": 90,
+      "justificativa": [
+        "pista_4"
+      ],
+      "pistas_minimas": 1,
+      "motivo_negativa": "A luva na garagem não basta para revistar a casa de um homem sem antecedentes. Falta ligar a luva ao galpão.",
+      "concedido_texto": "Mandado de busca e apreensão concedido para a casa de Ricardo Vale.",
+      "revela_pistas": [
+        "pista_8"
+      ],
+      "revela_local": "residencia"
+    },
+    {
+      "id": "mandato_sobczak",
+      "tipo": "registros",
+      "alvo": "suspeito_1",
+      "custo_minutos": 60,
+      "justificativa": [
+        "pista_5"
+      ],
+      "pistas_minimas": 1,
+      "motivo_negativa": "Uma ronda interrompida não prova nada sobre o zelador. O juiz quer um indício a mais.",
+      "concedido_texto": "Juiz concede os registros do celular do zelador Eugene Sobczak.",
+      "revela_pistas": []
+    }
+  ],
+  "consultas": [
+    {
+      "id": "consulta_vale_historico",
+      "tipo": "historico",
+      "alvo": "suspeito_3",
+      "requer_mandato": "mandato_vale_registros",
+      "custo_minutos": 30,
+      "revela_local": "posto_ashland",
+      "revela_pistas": [
+        "pista_9"
+      ],
+      "resultado": "Entre 21h50 e 22h30 da noite do crime, o celular de Vale ficou na antena da Ashland Avenue, perto de um posto de gasolina. Ele disse que estava em casa com a família."
+    },
+    {
+      "id": "consulta_vale_telefone",
+      "tipo": "telefone",
+      "alvo": "suspeito_3",
+      "requer_mandato": "mandato_vale_registros",
+      "custo_minutos": 30,
+      "resultado": "Na semana antes do incêndio, Vale ligou duas vezes para a seguradora. Os registros não dizem o assunto, mas as ligações duraram mais de meia hora."
+    },
+    {
+      "id": "consulta_sobczak_agora",
+      "tipo": "agora",
+      "alvo": "suspeito_1",
+      "requer_mandato": "mandato_sobczak",
+      "custo_minutos": 30,
+      "localizacao": {
+        "local": "galpao",
+        "ate_hora": 26
+      },
+      "resultado": "O celular do zelador está ativo agora no galpão. Ele deve ficar por lá até a manhã do dia 2."
+    }
+  ]
+}

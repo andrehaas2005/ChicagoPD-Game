@@ -1,0 +1,9 @@
+{
+  "id": "kowalski",
+  "nome": "Lena Kowalski",
+  "franquia": "Chicago PD",
+  "cargo": "Detetive",
+  "descricao": "Especialista em cenas de crime e em evidências digitais.",
+  "cor": "#1f5f5b",
+  "jogavel": true
+}

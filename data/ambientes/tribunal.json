@@ -1,0 +1,554 @@
+{
+  "id": "tribunal",
+  "nome": "Tribunal Criminal do Condado de Cook",
+  "chao": {
+    "largura": 22,
+    "profundidade": 18,
+    "cor": "#6b4a2b"
+  },
+  "parede": {
+    "altura": 4.2,
+    "espessura": 0.3,
+    "cor": "#4a2c17"
+  },
+  "luz": {
+    "cor": "#ffe2b8",
+    "energia": 1.1
+  },
+  "estrado": {
+    "centro": [
+      0,
+      -6.6
+    ],
+    "tamanho": [
+      7,
+      0.4,
+      3.4
+    ]
+  },
+  "paredes_internas": [
+    {
+      "centro": [
+        0,
+        2.6
+      ],
+      "tamanho": [
+        20,
+        1.0,
+        0.12
+      ],
+      "cor": "#8a5a2c"
+    }
+  ],
+  "moveis": [
+    {
+      "modelo": "res://assets/models/tribunal_juiz_banco.glb",
+      "centro": [
+        0,
+        -6.4
+      ],
+      "tamanho": [
+        4,
+        1.39,
+        2.4
+      ],
+      "rotacao": 0,
+      "altura_base": 0.4
+    },
+    {
+      "modelo": "res://assets/models/tribunal_brasao.glb",
+      "centro": [
+        0,
+        -8.8
+      ],
+      "tamanho": [
+        0.72,
+        0.86,
+        0.13
+      ],
+      "rotacao": 0,
+      "altura_base": 2.2
+    },
+    {
+      "modelo": "res://assets/models/tribunal_banco_testemunha.glb",
+      "centro": [
+        5.2,
+        -6.5
+      ],
+      "tamanho": [
+        1.54,
+        1.18,
+        1.67
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_agua.glb",
+      "centro": [
+        -3.0,
+        -6.9
+      ],
+      "tamanho": [
+        0.88,
+        1.16,
+        0.56
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_caixa_juri.glb",
+      "centro": [
+        -8.6,
+        -1.2
+      ],
+      "tamanho": [
+        2.9,
+        1.07,
+        2.93
+      ],
+      "rotacao": 90
+    },
+    {
+      "modelo": "res://assets/models/tribunal_mesa_defesa.glb",
+      "centro": [
+        -3.2,
+        -3.0
+      ],
+      "tamanho": [
+        1.88,
+        0.88,
+        0.94
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_mesa_defesa.glb",
+      "centro": [
+        3.2,
+        -3.0
+      ],
+      "tamanho": [
+        1.88,
+        0.88,
+        0.94
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_tribuna.glb",
+      "centro": [
+        -1.4,
+        -4.6
+      ],
+      "tamanho": [
+        0.72,
+        1.11,
+        0.6
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_tribuna.glb",
+      "centro": [
+        1.4,
+        -4.6
+      ],
+      "tamanho": [
+        0.72,
+        1.11,
+        0.6
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_cadeira_advogado.glb",
+      "centro": [
+        -3.2,
+        -1.9
+      ],
+      "tamanho": [
+        0.665,
+        1.11,
+        0.55
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_cadeira_advogado.glb",
+      "centro": [
+        3.2,
+        -1.9
+      ],
+      "tamanho": [
+        0.665,
+        1.11,
+        0.55
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_tela_provas.glb",
+      "centro": [
+        -6.6,
+        -3.4
+      ],
+      "tamanho": [
+        1.62,
+        2.03,
+        0.65
+      ],
+      "rotacao": 90
+    },
+    {
+      "modelo": "res://assets/models/tribunal_carrinho_provas.glb",
+      "centro": [
+        -8.0,
+        4.5
+      ],
+      "tamanho": [
+        0.8,
+        1.2,
+        1.08
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_galeria_banco.glb",
+      "centro": [
+        -7.0,
+        4.0
+      ],
+      "tamanho": [
+        2.3,
+        1.08,
+        0.6
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_galeria_banco.glb",
+      "centro": [
+        -4.5,
+        4.0
+      ],
+      "tamanho": [
+        2.3,
+        1.08,
+        0.6
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_galeria_banco.glb",
+      "centro": [
+        -2.0,
+        4.0
+      ],
+      "tamanho": [
+        2.3,
+        1.08,
+        0.6
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_galeria_banco.glb",
+      "centro": [
+        0.5,
+        4.0
+      ],
+      "tamanho": [
+        2.3,
+        1.08,
+        0.6
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_galeria_banco.glb",
+      "centro": [
+        3.0,
+        4.0
+      ],
+      "tamanho": [
+        2.3,
+        1.08,
+        0.6
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_galeria_banco.glb",
+      "centro": [
+        5.5,
+        4.0
+      ],
+      "tamanho": [
+        2.3,
+        1.08,
+        0.6
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_galeria_banco.glb",
+      "centro": [
+        -7.0,
+        6.4
+      ],
+      "tamanho": [
+        2.3,
+        1.08,
+        0.6
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_galeria_banco.glb",
+      "centro": [
+        -4.5,
+        6.4
+      ],
+      "tamanho": [
+        2.3,
+        1.08,
+        0.6
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_galeria_banco.glb",
+      "centro": [
+        -2.0,
+        6.4
+      ],
+      "tamanho": [
+        2.3,
+        1.08,
+        0.6
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_galeria_banco.glb",
+      "centro": [
+        0.5,
+        6.4
+      ],
+      "tamanho": [
+        2.3,
+        1.08,
+        0.6
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_galeria_banco.glb",
+      "centro": [
+        3.0,
+        6.4
+      ],
+      "tamanho": [
+        2.3,
+        1.08,
+        0.6
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/tribunal_galeria_banco.glb",
+      "centro": [
+        5.5,
+        6.4
+      ],
+      "tamanho": [
+        2.3,
+        1.08,
+        0.6
+      ],
+      "rotacao": 0
+    }
+  ],
+  "atores": {
+    "juiz": {
+      "pos": [
+        0,
+        -6.4
+      ],
+      "y": 0.4,
+      "rotulo": "JUIZ",
+      "cor": "#101010"
+    },
+    "presidente": {
+      "pos": [
+        -9.3,
+        -2.4
+      ],
+      "y": 0.0,
+      "rotulo": "PRESIDENTE DO JÚRI",
+      "cor": "#4b4f5c"
+    },
+    "promotor": {
+      "pos": [
+        -1.4,
+        -3.9
+      ],
+      "y": 0.0,
+      "rotulo": "PROMOTOR",
+      "cor": "#1f2f4a"
+    },
+    "defesa": {
+      "pos": [
+        1.4,
+        -3.9
+      ],
+      "y": 0.0,
+      "rotulo": "DEFESA",
+      "cor": "#3d2a2a"
+    },
+    "reu": {
+      "pos": [
+        3.2,
+        -0.9
+      ],
+      "y": 0.0,
+      "rotulo": "RÉU",
+      "cor": "#c46a1b"
+    },
+    "testemunha": {
+      "pos": [
+        5.2,
+        -4.8
+      ],
+      "y": 0.0,
+      "rotulo": "TESTEMUNHA",
+      "cor": "#5a6b4a"
+    },
+    "escrivao": {
+      "pos": [
+        -4.6,
+        -6.2
+      ],
+      "y": 0.0,
+      "rotulo": "ESCRIVÃO",
+      "cor": "#7a5a8a"
+    },
+    "oficial": {
+      "pos": [
+        -6.2,
+        -5.4
+      ],
+      "y": 0.0,
+      "rotulo": "OFICIAL DE JUSTIÇA",
+      "cor": "#2a2a2a"
+    }
+  },
+  "jurados": [
+    [
+      -9.3,
+      -2.4
+    ],
+    [
+      -9.3,
+      -1.92
+    ],
+    [
+      -9.3,
+      -1.44
+    ],
+    [
+      -9.3,
+      -0.96
+    ],
+    [
+      -9.3,
+      -0.48
+    ],
+    [
+      -9.3,
+      0.0
+    ],
+    [
+      -7.9,
+      -2.4
+    ],
+    [
+      -7.9,
+      -1.92
+    ],
+    [
+      -7.9,
+      -1.44
+    ],
+    [
+      -7.9,
+      -0.96
+    ],
+    [
+      -7.9,
+      -0.48
+    ],
+    [
+      -7.9,
+      0.0
+    ]
+  ],
+  "publico": [
+    [
+      -7.0,
+      3.3
+    ],
+    [
+      -4.5,
+      3.3
+    ],
+    [
+      -2.0,
+      3.3
+    ],
+    [
+      0.5,
+      3.3
+    ],
+    [
+      3.0,
+      3.3
+    ],
+    [
+      5.5,
+      3.3
+    ],
+    [
+      -7.0,
+      5.7
+    ],
+    [
+      -4.5,
+      5.7
+    ],
+    [
+      -2.0,
+      5.7
+    ],
+    [
+      0.5,
+      5.7
+    ],
+    [
+      3.0,
+      5.7
+    ],
+    [
+      5.5,
+      5.7
+    ]
+  ],
+  "detetive": [
+    -2.0,
+    5.7
+  ],
+  "entrada": [
+    0,
+    8.2
+  ]
+}

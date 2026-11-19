@@ -1,0 +1,9 @@
+{
+  "id": "patel",
+  "nome": "Anil Patel",
+  "franquia": "Chicago Med",
+  "cargo": "Enfermeiro",
+  "descricao": "Atua na triagem noturna e conhece todos os pacientes da ala.",
+  "cor": "#5c8a4d",
+  "jogavel": true
+}

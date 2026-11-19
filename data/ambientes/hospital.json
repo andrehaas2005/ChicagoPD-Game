@@ -1,0 +1,102 @@
+{
+  "id": "hospital",
+  "nome": "Ala do Hospital Gaylord",
+  "chao": {
+    "largura": 18,
+    "profundidade": 18,
+    "cor": "#dfe6ea"
+  },
+  "parede": {
+    "altura": 3.0,
+    "espessura": 0.3,
+    "cor": "#eef3f6"
+  },
+  "luz": {
+    "cor": "#ffffff",
+    "energia": 1.2
+  },
+  "entrada": [
+    0,
+    7
+  ],
+  "moveis": [
+    {
+      "modelo": "res://assets/models/hospital_cama.glb",
+      "centro": [
+        -6,
+        -5
+      ],
+      "tamanho": [
+        0.95,
+        0.98,
+        2.07
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/hospital_mesa_cama.glb",
+      "centro": [
+        -4.9,
+        -4.1
+      ],
+      "tamanho": [
+        0.86,
+        0.88,
+        0.56
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/hospital_cama.glb",
+      "centro": [
+        -2.5,
+        -5
+      ],
+      "tamanho": [
+        0.95,
+        0.98,
+        2.07
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/hospital_mesa_cama.glb",
+      "centro": [
+        -1.4,
+        -4.1
+      ],
+      "tamanho": [
+        0.86,
+        0.88,
+        0.56
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/hospital_cama.glb",
+      "centro": [
+        1,
+        -5
+      ],
+      "tamanho": [
+        0.95,
+        0.98,
+        2.07
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/hospital_mesa_cama.glb",
+      "centro": [
+        2.1,
+        -4.1
+      ],
+      "tamanho": [
+        0.86,
+        0.88,
+        0.56
+      ],
+      "rotacao": 0
+    }
+  ]
+}

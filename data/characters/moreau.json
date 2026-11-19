@@ -1,0 +1,9 @@
+{
+  "id": "moreau",
+  "nome": "Dante Moreau",
+  "franquia": "Chicago PD",
+  "cargo": "Detetive",
+  "descricao": "Investigador de homicídios. Paciente, observa tudo antes de agir.",
+  "cor": "#4a6fa5",
+  "jogavel": true
+}

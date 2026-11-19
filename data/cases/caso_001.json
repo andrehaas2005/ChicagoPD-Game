@@ -1,0 +1,745 @@
+{
+  "id": "caso_001",
+  "titulo": "Caso 001: Corrida na Michigan Avenue",
+  "resumo": "Um comerciante é encontrado morto no beco atrás de sua loja, na Michigan Avenue. A porta dos fundos estava arrombada e o cofre, vazio. A equipe precisa encontrar o autor antes que o caso esfrie.",
+  "local": "Michigan Avenue, Chicago",
+  "ordem": 1,
+  "crossover": "Chicago Med",
+  "duracao_horas": 48,
+  "personagens": [
+    "castellano",
+    "ferreira"
+  ],
+  "locais": [
+    {
+      "id": "delegacia",
+      "nome": "Delegacia do 21º Distrito",
+      "tipo": "delegacia",
+      "ambiente": "delegacia"
+    },
+    {
+      "id": "beco",
+      "nome": "Beco atrás da loja",
+      "tipo": "rua",
+      "custo_minutos": 45,
+      "posicao_mapa": [
+        0.3,
+        0.6
+      ],
+      "ambiente": "rua"
+    },
+    {
+      "id": "loja",
+      "nome": "Lang & Keane Ferragens, Michigan Avenue",
+      "tipo": "rua",
+      "custo_minutos": 30,
+      "posicao_mapa": [
+        0.38,
+        0.45
+      ],
+      "ambiente": "loja"
+    },
+    {
+      "id": "hospital",
+      "nome": "Hospital Gaylord",
+      "tipo": "rua",
+      "custo_minutos": 90,
+      "posicao_mapa": [
+        0.75,
+        0.2
+      ],
+      "ambiente": "hospital"
+    },
+    {
+      "id": "casa_keane",
+      "nome": "Casa dos Keane, em Oak Park",
+      "tipo": "rua",
+      "custo_minutos": 75,
+      "posicao_mapa": [
+        0.12,
+        0.5
+      ],
+      "oculto": true,
+      "ambiente": "apartamento"
+    }
+  ],
+  "pistas": [
+    {
+      "id": "pista_1",
+      "descricao": "Pegadas de sapato tamanho 42 no beco, com resíduo de cimento na sola.",
+      "local": "beco",
+      "posicao": [
+        -4,
+        0.15,
+        3
+      ],
+      "laboratorio": {
+        "tempo_horas": 6,
+        "conclusao": "Solado de bota de trabalho com cimento e gesso. Aponta para quem trabalha em obra, mas não identifica a pessoa."
+      }
+    },
+    {
+      "id": "pista_2",
+      "descricao": "Fragmento de vidro da janela dos fundos, com resto de fita adesiva na face de dentro.",
+      "local": "loja",
+      "posicao": [
+        4,
+        0.15,
+        -3
+      ]
+    },
+    {
+      "id": "pista_3",
+      "descricao": "Cofre aberto sem sinal de força: a combinação foi digitada. Só três pessoas conheciam o código.",
+      "local": "loja",
+      "posicao": [
+        0,
+        0.15,
+        5
+      ]
+    },
+    {
+      "id": "pista_4",
+      "descricao": "Registro da câmera do estacionamento do Hospital Gaylord: um carro azul-escuro parado às 22h50 do dia 1.",
+      "local": "hospital",
+      "posicao": [
+        3,
+        0.15,
+        -2
+      ]
+    },
+    {
+      "id": "pista_5",
+      "descricao": "Gaze ensanguentada descartada na sala de atendimento, com sangue de um homem que não é a vítima.",
+      "local": "hospital",
+      "posicao": [
+        -2,
+        0.15,
+        4
+      ],
+      "laboratorio": {
+        "tempo_horas": 5,
+        "conclusao": "Sangue de um homem. Sem amostra de comparação, o laboratório só confirma que não pertence à vítima."
+      }
+    },
+    {
+      "id": "pista_6",
+      "descricao": "Luva de couro manchada de sangue, jogada no lixo dos fundos da loja.",
+      "local": "loja",
+      "posicao": [
+        5,
+        0.15,
+        1
+      ],
+      "laboratorio": {
+        "tempo_horas": 8,
+        "conclusao": "Sangue da vítima na palma e de um segundo perfil masculino no punho. Esse perfil coincide com a gaze da sala de atendimento do Gaylord. Esta é a prova conclusiva."
+      }
+    },
+    {
+      "id": "pista_8",
+      "descricao": "Pé de cabra e rolo de fita adesiva escondidos no porão, com cimento seco nas pontas.",
+      "local": "casa_keane",
+      "posicao": [
+        2,
+        0.15,
+        -3
+      ],
+      "oculta": true,
+      "laboratorio": {
+        "tempo_horas": 5,
+        "conclusao": "O cimento do pé de cabra é o mesmo da sola da pegada do beco. A fita combina com o fragmento de vidro da loja."
+      }
+    }
+  ],
+  "suspeitos": [
+    {
+      "id": "suspeito_1",
+      "nome": "Dário Pinto",
+      "tipo": "suspeito",
+      "personagem_id": null,
+      "motivo": "Foi demitido na semana passada e ameaçou o patrão na frente de funcionários.",
+      "posicao": [
+        6,
+        1,
+        4
+      ],
+      "rotina": [
+        {
+          "dia": 2,
+          "de_hora": 8,
+          "ate_hora": 11,
+          "local": "loja"
+        },
+        {
+          "dia": 2,
+          "de_hora": 16,
+          "ate_hora": 20,
+          "local": "beco"
+        },
+        {
+          "dia": 3,
+          "de_hora": 9,
+          "ate_hora": 12,
+          "local": "delegacia"
+        }
+      ],
+      "atitude": "agressivo",
+      "limiar_pressao": 2,
+      "alibi": {
+        "texto": "Estava sozinho no bar da Division Street, até meia-noite.",
+        "falso": false,
+        "exposto_por": []
+      },
+      "segredos": [
+        {
+          "id": "segredo_1",
+          "descricao": "Quebrou a janela dos fundos da loja semanas antes da demissão, por raiva.",
+          "revelado_com_pressao": true,
+          "revelado_por_provas": [
+            "pista_2"
+          ],
+          "revela_pista": null
+        }
+      ],
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Onde você estava na noite do crime?",
+          "resposta": "No bar da Division, sozinho. Já deve ter gente querendo me culpar.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Você ainda tinha a chave dos fundos?",
+          "resposta": "Devolvi tudo na demissão. Se alguém arrombou a porta, não fui eu.",
+          "pressao": 1,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_3",
+          "pergunta": "Você esteve no beco na noite do crime?",
+          "resposta": "Passei pela rua, mais nada. Não entro em beco.",
+          "pressao": 1,
+          "resposta_com_prova": {
+            "pista_1": "Essas pegadas não são minhas. Eu calço 44, cara. Procura outro."
+          },
+          "revela_pista": null
+        }
+      ]
+    },
+    {
+      "id": "suspeito_2",
+      "nome": "Raymond Keane",
+      "tipo": "suspeito",
+      "personagem_id": null,
+      "motivo": "Sócio da vítima, com uma dívida de negócio em aberto e acesso ao cofre.",
+      "posicao": [
+        -6,
+        1,
+        -4
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 14,
+          "ate_hora": 17,
+          "local": "loja"
+        },
+        {
+          "dia": 2,
+          "de_hora": 8,
+          "ate_hora": 11,
+          "local": "loja"
+        },
+        {
+          "dia": 3,
+          "de_hora": 8,
+          "ate_hora": 12,
+          "local": "delegacia"
+        }
+      ],
+      "atitude": "calmo",
+      "limiar_pressao": 4,
+      "alibi": {
+        "texto": "Estava em casa com a esposa desde as nove da noite.",
+        "falso": true,
+        "exposto_por": [
+          "pista_4"
+        ]
+      },
+      "segredos": [
+        {
+          "id": "segredo_1",
+          "descricao": "Abriu o cofre e forçou a porta dos fundos depois de fechar a loja. Foi ao Gaylord com a mão cortada.",
+          "revelado_com_pressao": true,
+          "revelado_por_provas": [
+            "pista_3",
+            "pista_6"
+          ],
+          "revela_pista": null
+        }
+      ],
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Onde você estava na noite do crime?",
+          "resposta": "Em casa, com a Nadia, desde as nove.",
+          "pressao": 0,
+          "resposta_com_prova": {
+            "pista_4": "Eu saí, sim. Fui ao Gaylord, mas não é o que parece."
+          },
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Você tinha dívida com a vítima?",
+          "resposta": "Uma dívida de negócio. Estava renegociando com o Joseph.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_3",
+          "pergunta": "Você sabe a combinação do cofre?",
+          "resposta": "Sei. Eu e o Joseph éramos os únicos, e a Nadia às vezes.",
+          "pressao": 0,
+          "resposta_com_prova": {
+            "pista_3": "Está bem. Eu abri o cofre. Ninguém forçou nada, eu sei o código."
+          },
+          "revela_pista": null
+        },
+        {
+          "id": "perg_4",
+          "pergunta": "Como você se cortou na mão?",
+          "resposta": "Numa caixa de vidro no depósito, dias antes. Não é da sua conta.",
+          "pressao": 1,
+          "resposta_com_prova": {
+            "pista_6": "Chega. A luva é minha, e o sangue no punho também. Eu não queria ter entrado naquela porta."
+          },
+          "revela_pista": null
+        }
+      ]
+    },
+    {
+      "id": "suspeito_3",
+      "nome": "Gilberto Vance",
+      "tipo": "suspeito",
+      "personagem_id": null,
+      "motivo": "Credor da vítima, com empréstimos em aberto e juros altos.",
+      "posicao": [
+        4,
+        1,
+        -6
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 14,
+          "ate_hora": 18,
+          "local": "loja"
+        },
+        {
+          "dia": 2,
+          "de_hora": 13,
+          "ate_hora": 16,
+          "local": "delegacia"
+        },
+        {
+          "dia": 3,
+          "de_hora": 9,
+          "ate_hora": 12,
+          "local": "hospital"
+        }
+      ],
+      "atitude": "nervoso",
+      "limiar_pressao": 3,
+      "alibi": {
+        "texto": "Estava no escritório de um cliente, na Wacker Drive, até as dez.",
+        "falso": false,
+        "exposto_por": []
+      },
+      "segredos": [
+        {
+          "id": "segredo_1",
+          "descricao": "Esteve no escritório dias antes, para cobrar, e viu a janela dos fundos com a fita.",
+          "revelado_com_pressao": true,
+          "revelado_por_provas": [
+            "pista_2"
+          ],
+          "revela_pista": null
+        }
+      ],
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Onde você estava na noite do crime?",
+          "resposta": "Na Wacker Drive, com um cliente. Pergunte a ele.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Você emprestou dinheiro ao Joseph?",
+          "resposta": "Emprestei. Ele pagava com juros, como todo mundo.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_3",
+          "pergunta": "Você esteve no beco?",
+          "resposta": "Nunca fui ao beco. Não sou idiota.",
+          "pressao": 1,
+          "revela_pista": null
+        }
+      ]
+    },
+    {
+      "id": "suspeito_4",
+      "nome": "Nadia Keane",
+      "tipo": "suspeito",
+      "personagem_id": null,
+      "motivo": "Esposa do sócio. Sabia da dívida e da combinação do cofre.",
+      "posicao": [
+        -3,
+        1,
+        6
+      ],
+      "rotina": [
+        {
+          "dia": 2,
+          "de_hora": 10,
+          "ate_hora": 14,
+          "local": "loja"
+        },
+        {
+          "dia": 2,
+          "de_hora": 18,
+          "ate_hora": 22,
+          "local": "hospital"
+        },
+        {
+          "dia": 3,
+          "de_hora": 8,
+          "ate_hora": 11,
+          "local": "delegacia"
+        }
+      ],
+      "atitude": "calmo",
+      "limiar_pressao": 5,
+      "alibi": {
+        "texto": "Estava em casa com o marido, a noite toda.",
+        "falso": false,
+        "exposto_por": []
+      },
+      "segredos": [
+        {
+          "id": "segredo_1",
+          "descricao": "Viu o marido voltar para casa com a mão enfaixada e mentiu para a polícia.",
+          "revelado_com_pressao": true,
+          "revelado_por_provas": [
+            "pista_5"
+          ],
+          "revela_pista": null
+        }
+      ],
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Você estava em casa na noite do crime?",
+          "resposta": "Estava. Com o Raymond, até ele sair, perto das dez.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Você sabia da dívida do Raymond com o Joseph?",
+          "resposta": "Sabia. Eu pedi para ele resolver antes do fim do ano.",
+          "pressao": -1,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_3",
+          "pergunta": "Você sabe a combinação do cofre?",
+          "resposta": "Sei. Não conte pra ninguém.",
+          "pressao": 0,
+          "resposta_com_prova": {
+            "pista_3": "Tá, eu sei. Ele abriu o cofre por volta das dez. Eu ouvi o barulho da porta."
+          },
+          "revela_pista": null
+        }
+      ]
+    },
+    {
+      "id": "suspeito_5",
+      "nome": "Tomás Ferreira",
+      "tipo": "suspeito",
+      "personagem_id": "ferreira",
+      "motivo": "Vizinho de prédio, bombeiro de folga. Discutia com a vítima por causa do barulho de uma obra.",
+      "posicao": [
+        7,
+        1,
+        -2
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 18,
+          "ate_hora": 22,
+          "local": "beco"
+        },
+        {
+          "dia": 2,
+          "de_hora": 8,
+          "ate_hora": 11,
+          "local": "beco"
+        },
+        {
+          "dia": 3,
+          "de_hora": 14,
+          "ate_hora": 18,
+          "local": "loja"
+        }
+      ],
+      "atitude": "arrogante",
+      "limiar_pressao": 3,
+      "alibi": {
+        "texto": "Estava em casa, dormindo cedo. Trabalho de madrugada.",
+        "falso": false,
+        "exposto_por": []
+      },
+      "segredos": [
+        {
+          "id": "segredo_1",
+          "descricao": "Estava no beco na noite do crime, deixando uma caixa de material de obra.",
+          "revelado_com_pressao": true,
+          "revelado_por_provas": [
+            "pista_1"
+          ],
+          "revela_pista": null
+        }
+      ],
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Onde você estava na noite do crime?",
+          "resposta": "Em casa, dormindo. Trabalho cedo, não saio à noite.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Você discutiu com o Joseph?",
+          "resposta": "Discutimos sobre o barulho da obra do prédio. Só isso.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_3",
+          "pergunta": "Essas pegadas no beco podem ser suas?",
+          "resposta": "Minhas botas são 42, e a metade dos bombeiros calça isso.",
+          "pressao": 1,
+          "resposta_com_prova": {
+            "pista_1": "Tá, são minhas botas. Eu estava no beco deixando uma caixa. Não entrei na loja."
+          },
+          "revela_pista": null
+        }
+      ]
+    }
+  ],
+  "testemunhas": [
+    {
+      "id": "testemunha_1",
+      "tipo": "testemunha",
+      "nome": "Irene Walsh",
+      "motivo": "Dona da loja de tecidos ao lado. Ouviu uma discussão na noite do crime.",
+      "posicao": [
+        -7,
+        1,
+        2
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 15,
+          "ate_hora": 20,
+          "local": "loja"
+        }
+      ],
+      "intimavel": true,
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Você ouviu alguma coisa na noite do crime?",
+          "resposta": "Uma discussão por volta das dez. Um homem gritava: 'você não vai levar isso'.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Você viu alguém sair pelo beco?",
+          "resposta": "Vi um homem de casaco cinza, mas não consegui ver o rosto.",
+          "pressao": 0,
+          "revela_pista": null
+        }
+      ]
+    },
+    {
+      "id": "testemunha_2",
+      "tipo": "testemunha",
+      "nome": "Dra. Helena Castellano",
+      "motivo": "Cirurgiã do Hospital Gaylord. Estava de plantão na madrugada do crime.",
+      "posicao": [
+        6,
+        1,
+        7
+      ],
+      "rotina": [
+        {
+          "dia": 1,
+          "de_hora": 22,
+          "ate_hora": 24,
+          "local": "hospital"
+        },
+        {
+          "dia": 2,
+          "de_hora": 6,
+          "ate_hora": 9,
+          "local": "hospital"
+        }
+      ],
+      "intimavel": false,
+      "interrogatorio": [
+        {
+          "id": "perg_1",
+          "pergunta": "Você atendeu alguém na noite do crime?",
+          "resposta": "Atendi um homem com um corte profundo na palma. Pagou em dinheiro e não deu o nome completo.",
+          "pressao": 0,
+          "revela_pista": null
+        },
+        {
+          "id": "perg_2",
+          "pergunta": "Ele disse como se cortou?",
+          "resposta": "Disse que foi numa caixa de vidro. A ferida tinha outro formato, e eu não acreditei.",
+          "pressao": 1,
+          "revela_pista": null
+        }
+      ]
+    }
+  ],
+  "reviravoltas": [
+    {
+      "hora": 26,
+      "descricao": "Plantão: o Hospital Gaylord entregou o registro do estacionamento. Um carro azul-escuro esteve parado lá às 22h50 do dia 1.",
+      "revela_pista": "pista_4"
+    }
+  ],
+  "solucao": {
+    "culpado": "suspeito_2",
+    "pistas_necessarias": [
+      "pista_3",
+      "pista_4",
+      "pista_5",
+      "pista_6"
+    ],
+    "motivo_correto": "Raymond Keane, sócio da vítima, devia dinheiro e sabia a combinação do cofre. Depois de fechar a loja, abriu o cofre, levou o dinheiro e forçou a porta dos fundos para simular um roubo. Na briga com Joseph Lang, cortou a mão. Foi ao Hospital Gaylord com a mão cortada, deu um nome falso e saiu. A luva ensanguentada e a gaze do hospital têm o mesmo perfil de sangue."
+  },
+  "mandatos": [
+    {
+      "id": "mandato_keane_registros",
+      "tipo": "registros",
+      "alvo": "suspeito_2",
+      "custo_minutos": 60,
+      "justificativa": [
+        "pista_3",
+        "pista_2"
+      ],
+      "pistas_minimas": 1,
+      "motivo_negativa": "Só a combinação do cofre não basta para mexer no celular de um sócio. Falta um indício de que ele abriu o cofre ou entrou na loja.",
+      "concedido_texto": "Juiz concede os registros do celular e o endereço de Raymond Keane.",
+      "revela_pistas": []
+    },
+    {
+      "id": "mandato_keane_busca",
+      "tipo": "busca",
+      "alvo": "suspeito_2",
+      "custo_minutos": 90,
+      "justificativa": [
+        "pista_2",
+        "pista_3"
+      ],
+      "pistas_minimas": 2,
+      "motivo_negativa": "Para entrar na casa, o juiz quer ligar o vidro com a fita e o cofre a Keane. Os dois indícios precisam estar na mão.",
+      "concedido_texto": "Mandado de busca e apreensão concedido para a casa dos Keane, em Oak Park.",
+      "revela_pistas": [
+        "pista_8"
+      ],
+      "revela_local": "casa_keane"
+    },
+    {
+      "id": "mandato_nadia",
+      "tipo": "registros",
+      "alvo": "suspeito_4",
+      "custo_minutos": 60,
+      "justificativa": [
+        "pista_3"
+      ],
+      "pistas_minimas": 1,
+      "motivo_negativa": "O juiz acha que saber a combinação não faz de Nadia suspeita sem outro indício.",
+      "concedido_texto": "Juiz concede os registros do celular de Nadia Keane.",
+      "revela_pistas": []
+    }
+  ],
+  "consultas": [
+    {
+      "id": "consulta_keane_endereco",
+      "tipo": "endereco",
+      "alvo": "suspeito_2",
+      "requer_mandato": "mandato_keane_registros",
+      "custo_minutos": 30,
+      "revela_local": "casa_keane",
+      "resultado": "Raymond e Nadia Keane moram numa casa em Oak Park, com garagem e porão. O endereço é longe da loja, mas o carro está registrado no nome dele."
+    },
+    {
+      "id": "consulta_keane_historico",
+      "tipo": "historico",
+      "alvo": "suspeito_2",
+      "requer_mandato": "mandato_keane_registros",
+      "custo_minutos": 30,
+      "resultado": "Entre 23h e 23h40 da noite do crime, o celular de Keane ficou na antena da Michigan Avenue, a poucas quadras da loja. Ele disse que estava em casa desde as nove."
+    },
+    {
+      "id": "consulta_keane_agora",
+      "tipo": "agora",
+      "alvo": "suspeito_2",
+      "requer_mandato": "mandato_keane_registros",
+      "custo_minutos": 30,
+      "revela_local": "casa_keane",
+      "localizacao": {
+        "local": "casa_keane",
+        "ate_hora": 26
+      },
+      "resultado": "O celular de Keane está ativo agora na casa de Oak Park. Ele deve ficar lá até cerca de 10h do dia 2."
+    },
+    {
+      "id": "consulta_nadia_telefone",
+      "tipo": "telefone",
+      "alvo": "suspeito_4",
+      "requer_mandato": "mandato_nadia",
+      "custo_minutos": 30,
+      "resultado": "Nadia ligou para o marido duas vezes depois das 22h da noite do crime. Nas duas, ele não atendeu."
+    },
+    {
+      "id": "consulta_nadia_agora",
+      "tipo": "agora",
+      "alvo": "suspeito_4",
+      "requer_mandato": "mandato_nadia",
+      "custo_minutos": 30,
+      "localizacao": {
+        "local": "hospital",
+        "ate_hora": 30
+      },
+      "resultado": "O celular de Nadia está ativo agora perto do Hospital Gaylord. Ela deve ficar por lá até as 14h do dia 2."
+    }
+  ]
+}

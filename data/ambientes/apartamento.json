@@ -1,0 +1,63 @@
+{
+  "id": "apartamento",
+  "nome": "Apartamento",
+  "chao": {
+    "largura": 18,
+    "profundidade": 18,
+    "cor": "#8a6a4f"
+  },
+  "parede": {
+    "altura": 3.0,
+    "espessura": 0.3,
+    "cor": "#e6dccb"
+  },
+  "luz": {
+    "cor": "#ffd9a0",
+    "energia": 1.0
+  },
+  "entrada": [
+    0,
+    7
+  ],
+  "moveis": [
+    {
+      "modelo": "res://assets/models/apto_sofa3.glb",
+      "centro": [
+        -4,
+        -7.8
+      ],
+      "tamanho": [
+        2.5,
+        0.99,
+        0.92
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/apto_sofa2.glb",
+      "centro": [
+        5,
+        -7.8
+      ],
+      "tamanho": [
+        1.35,
+        0.99,
+        0.92
+      ],
+      "rotacao": 0
+    },
+    {
+      "modelo": "res://assets/models/apto_cama_dia.glb",
+      "centro": [
+        5,
+        3
+      ],
+      "tamanho": [
+        1.86,
+        0.98,
+        0.88
+      ],
+      "rotacao": 90
+    }
+  ]
+}
